@@ -1,0 +1,6 @@
+gaussianKernel =  ones(3,3);
+result_gaussian_kernel = gaussianKernel;
+for i=1:10
+    result_gaussian_kernel = imfilter(result_gaussian_kernel,result_gaussian_kernel,'conv');
+end
+plot(result_gaussian_kernel);
